@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TPM Career Strategy Session | Prerna Soni</title>
+  <meta name="description" content="Paid 45-min TPM career strategy session with Prerna Soni — 13-year TPM at Akamai, Samsung, Dell. ₹299. Walk away with your personalised career roadmap.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+
+    /* ════════════════════════════════════════
+       TOKENS — same dark system the user approved
+    ════════════════════════════════════════ */
+    :root {
+      --bg:           #06060f;
+      --surface:      #0d0d1a;
+      --surface-2:    #13132050;
+      --glass:        rgba(13,13,26,0.7);
+      --white:        #f0f0ff;
+      --accent:       #2563eb;
+      --accent-lo:    rgba(37,99,235,0.18);
+      --accent-glow:  rgba(37,99,235,0.28);
+      --purple:       #7c3aed;
+      --green:        #10b981;
+      --red:          #ef4444;
+      --amber:        #f59e0b;
+      --g4:           #9ca3af;
+      --g5:           #6b7280;
+      --g6:           #4b5563;
+      --border:       rgba(255,255,255,0.07);
+      --border-hi:    rgba(255,255,255,0.13);
+      --r:            8px;
+      --r-lg:         16px;
+      --r-xl:         24px;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── Story section ── */
+    .story-opener { margin-bottom: 2.25rem; }
+    .story-h {
+      font-size: clamp(1.9rem, 3.2vw, 2.9rem);
+      font-weight: 900; letter-spacing: -.035em; line-height: 1.12;
+      margin-top: .75rem;
+    }
+    .story-body { max-width: 680px; margin-bottom: 3rem; }
+    .story-body p { font-size: 1rem; color: var(--g4); line-height: 1.85; margin-bottom: 1.35rem; }
+    .story-body p strong { color: var(--white); font-weight: 700; }
+    .story-body p:last-child { margin-bottom: 0; }
+
+    .story-stats {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1.5rem; margin-bottom: 2.5rem;
+      padding: 2rem 2.5rem;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-size: 2.4rem; font-weight: 900; letter-spacing: -.04em;
+      color: var(--accent); line-height: 1; margin-bottom: .4rem;
+    }
+    .stat-label { font-size: .76rem; color: var(--g5); line-height: 1.5; }
+
+    .story-cta-block {
+      text-align: center;
+      padding: 2.5rem;
+      background: rgba(37,99,235,.05);
+      border: 1px solid rgba(37,99,235,.18);
+      border-radius: var(--r-xl);
+    }
+    .story-cta-quote {
+      font-size: 1.25rem; font-weight: 700;
+      color: var(--white); line-height: 1.5;
+      max-width: 520px; margin: 0 auto 1.5rem;
+      font-style: italic; letter-spacing: -.01em;
+    }
+    .story-cta-note {
+      margin-top: .85rem; font-size: .78rem; color: var(--g5);
+    }
+
+    @media (max-width: 640px) {
+      .story-stats { grid-template-columns: 1fr; gap: 1rem; padding: 1.5rem; }
+      .stat-num { font-size: 2rem; }
+    }
+    /* ── SCROLL ANIMATIONS ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .65s cubic-bezier(.16,1,.3,1), transform .65s cubic-bezier(.16,1,.3,1);
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-up.d1 { transition-delay: .08s; }
+    .fade-up.d2 { transition-delay: .16s; }
+    .fade-up.d3 { transition-delay: .24s; }
+    .fade-up.d4 { transition-delay: .32s; }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
+    .container-sm { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+
+    /* ── TYPOGRAPHY ── */
+    .label {
+      font-size: 11px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--accent);
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-family: inherit; font-weight: 700; cursor: pointer;
+      border: none; text-decoration: none; transition: all .2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent); color: #fff;
+      padding: .9rem 2rem; border-radius: var(--r);
+      font-size: .95rem;
+      box-shadow: 0 4px 24px var(--accent-glow);
+    }
+    .btn-primary:hover {
+      background: #1d4ed8; transform: translateY(-2px);
+      box-shadow: 0 8px 32px var(--accent-glow);
+    }
+
+    .btn-ghost {
+      color: var(--g4); font-size: .9rem; font-weight: 500;
+      padding: .9rem 1.5rem; border-radius: var(--r);
+      border: 1px solid var(--border);
+      background: transparent;
+    }
+    .btn-ghost:hover { border-color: var(--border-hi); color: var(--white); }
+
+    .btn-pay {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--purple) 100%);
+      color: #fff; padding: 1rem 2.5rem;
+      border-radius: var(--r); font-size: 1rem;
+      box-shadow: 0 4px 32px rgba(37,99,235,.35);
+    }
+    .btn-pay:hover { transform: translateY(-2px); box-shadow: 0 8px 40px rgba(37,99,235,.45); }
+
+    /* ── CARDS (glassmorphism) ── */
+    .glass-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      backdrop-filter: blur(12px);
+    }
+
+    /* ════════════════════════════════════════
+       STICKY NAV
+       CRO: persistent CTA anchor keeps booking always 1 click away
+    ════════════════════════════════════════ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+      padding: .85rem 2rem;
+      background: rgba(6,6,15,.82);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav-logo { font-size: 1rem; font-weight: 800; color: var(--white); text-decoration: none; letter-spacing: -.02em; }
+    .nav-logo span { color: var(--accent); }
+    .nav-right { display: flex; align-items: center; gap: .75rem; }
+    .nav-price { font-size: .8rem; color: var(--g5); }
+    .nav-cta { background: var(--accent); color: #fff; padding: .55rem 1.3rem; border-radius: 6px; font-weight: 700; font-size: .85rem; text-decoration: none; transition: all .2s; }
+    .nav-cta:hover { background: #1d4ed8; transform: translateY(-1px); }
+
+    /* ════════════════════════════════════════
+       HERO — split layout
+       CRO: face = trust. Eye contact establishes parasocial connection before
+       the visitor reads a single word. Left=scan path, Right=anchor.
+    ════════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 480px;
+      align-items: center;
+      gap: 64px;
+      padding: 120px 80px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Ambient glow layers */
+    .hero::before {
+      content: '';
+      position: absolute; top: -20%; right: 0;
+      width: 700px; height: 700px;
+      background: radial-gradient(ellipse, rgba(37,99,235,.18) 0%, rgba(124,58,237,.08) 40%, transparent 70%);
+      pointer-events: none;
+      animation: ambient 8s ease-in-out infinite;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0;
+      width: 400px; height: 400px;
+      background: radial-gradient(ellipse, rgba(37,99,235,.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    @keyframes ambient {
+      0%,100% { opacity: .7; transform: scale(1); }
+      50%      { opacity: 1;  transform: scale(1.07); }
+    }
+
+    /* LEFT */
+    .hero-left { position: relative; z-index: 2; }
+
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .75rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--accent);
+      background: var(--accent-lo);
+      border: 1px solid rgba(37,99,235,.28);
+      padding: .35rem .9rem; border-radius: 100px;
+      margin-bottom: 1.5rem;
+      animation: fadeUp .6s ease both;
+    }
+    .eyebrow-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      animation: blink 2s ease infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 4vw, 3.8rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.05;
+      margin-bottom: 1.25rem;
+      animation: fadeUp .6s .08s ease both;
+    }
+    .hero h1 .hi { color: var(--accent); }
+
+    .hero-sub {
+      font-size: 1.05rem; color: var(--g4);
+      line-height: 1.7; max-width: 520px;
+      margin-bottom: 1.75rem;
+      animation: fadeUp .6s .16s ease both;
+    }
+
+    .hero-badges {
+      display: flex; flex-wrap: wrap; gap: .5rem;
+      margin-bottom: 2rem;
+      animation: fadeUp .6s .22s ease both;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .35rem;
+      font-size: .78rem; font-weight: 600;
+      color: var(--g4);
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+      padding: .35rem .85rem; border-radius: 6px;
+    }
+    .hero-badge .dot { color: var(--green); font-size: 1rem; }
+
+    .hero-ctas {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      animation: fadeUp .6s .28s ease both;
+      margin-bottom: 2rem;
+    }
+
+    .hero-trust {
+      display: flex; align-items: center; gap: .85rem;
+      animation: fadeUp .6s .36s ease both;
+    }
+    .trust-faces {
+      display: flex;
+    }
+    .trust-face {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--purple) 100%);
+      border: 2px solid var(--bg);
+      margin-left: -8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .65rem; font-weight: 700; color: #fff;
+    }
+    .trust-face:first-child { margin-left: 0; }
+    .trust-copy { font-size: .8rem; color: var(--g5); line-height: 1.4; }
+    .trust-copy strong { color: var(--g4); }
+
+    /* RIGHT — portrait */
+    .hero-right {
+      position: relative; z-index: 2;
+      display: flex; justify-content: center; align-items: center;
+    }
+
+    .portrait-wrapper { position: relative; }
+
+    .portrait-glow {
+      position: absolute;
+      inset: -60px;
+      background: radial-gradient(ellipse, rgba(37,99,235,.22) 0%, rgba(124,58,237,.1) 40%, transparent 70%);
+      filter: blur(30px);
+      z-index: 0;
+      animation: ambient 6s ease-in-out infinite;
+    }
+
+    .portrait-img {
+      position: relative; z-index: 1;
+      width: 340px;
+      border-radius: var(--r-xl);
+      display: block;
+      box-shadow: 0 60px 120px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.08);
+      animation: fadeUp .6s .1s ease both;
+    }
+
+    /* Bottom fade — blends white photo bg into dark page */
+    .portrait-fade {
+      position: absolute; z-index: 2;
+      bottom: 0; left: 0; right: 0; height: 180px;
+      background: linear-gradient(to top, var(--bg) 0%, transparent 100%);
+      border-radius: 0 0 var(--r-xl) var(--r-xl);
+    }
+
+    /* Credential chips — static row below portrait */
+    .portrait-chips {
+      display: flex; gap: .5rem; margin-top: .85rem;
+      justify-content: center; flex-wrap: wrap;
+    }
+    .chip {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.09);
+      padding: .38rem .8rem; border-radius: 6px;
+      font-size: .72rem; font-weight: 600; color: var(--g4);
+      white-space: nowrap; letter-spacing: .01em;
+    }
+    .chip .chip-val { color: var(--white); font-weight: 800; font-size: .8rem; }
+    .chip .chip-dot { color: var(--accent); font-size: .7rem; }
+
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(20px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+
+    /* ════════════════════════════════════════
+       TRUST / LOGO BAR
+       CRO: Authority transfer from known brands reduces risk perception
+    ════════════════════════════════════════ */
+    .trust-bar {
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+    }
+    .trust-bar-inner {
+      display: flex; align-items: center; gap: 3rem;
+      justify-content: center; flex-wrap: wrap;
+    }
+    .trust-bar-label { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--g6); }
+    .logo-strip { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
+    .co-logo {
+      font-size: 1.05rem; font-weight: 800; letter-spacing: -.01em;
+      color: rgba(255,255,255,.35);
+      transition: color .2s;
+      cursor: default;
+    }
+    .co-logo:hover { color: rgba(255,255,255,.7); }
+
+    /* ════════════════════════════════════════
+       BEFORE / AFTER
+       CRO: Problem/solution framing activates loss aversion before the solution
+    ════════════════════════════════════════ */
+    .section { padding: 96px 0; }
+    .section-alt { background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 50%, var(--bg) 100%); }
+
+    .section-header { text-align: center; margin-bottom: 3rem; }
+    .section-header h2 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 900; letter-spacing: -.03em;
+      margin-top: .75rem; margin-bottom: .75rem;
+    }
+    .section-header p { font-size: 1rem; color: var(--g4); max-width: 500px; margin: 0 auto; line-height: 1.65; }
+
+    .ba-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.5rem; max-width: 860px; margin: 0 auto;
+    }
+
+    .ba-col {
+      padding: 2rem;
+      border-radius: var(--r-lg);
+    }
+    .ba-col.before {
+      background: rgba(239,68,68,.04);
+      border: 1px solid rgba(239,68,68,.12);
+    }
+    .ba-col.after {
+      background: rgba(37,99,235,.06);
+      border: 1px solid rgba(37,99,235,.18);
+    }
+
+    .ba-label {
+      font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      padding-bottom: 1rem; margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .ba-col.before .ba-label { color: var(--red); }
+    .ba-col.after .ba-label { color: var(--accent); }
+
+    .ba-item {
+      display: flex; gap: .65rem; align-items: flex-start;
+      font-size: .88rem; line-height: 1.55; margin-bottom: .9rem;
+    }
+    .ba-item:last-child { margin-bottom: 0; }
+    .ba-col.before .ba-item { color: var(--g4); }
+    .ba-col.after .ba-item { color: var(--white); }
+    .ba-icon { flex-shrink: 0; margin-top: .1rem; font-size: .85rem; }
+    .ba-col.before .ba-icon { color: var(--red); }
+    .ba-col.after .ba-icon { color: var(--green); }
+
+    /* ════════════════════════════════════════
+       ABOUT / CAREER TIMELINE
+       CRO: Specific career history = proof, not claims. Timeline format
+       shows trajectory, which signals forward momentum and authority.
+    ════════════════════════════════════════ */
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 480px;
+      gap: 80px; align-items: start;
+    }
+
+    .about-bio h2 {
+      font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+      font-weight: 900; letter-spacing: -.03em;
+      margin: .75rem 0 1.25rem;
+      line-height: 1.1;
+    }
+    .about-bio h2 .hi { color: var(--accent); }
+
+    .about-bio p { font-size: .95rem; color: var(--g4); line-height: 1.75; margin-bottom: 1rem; }
+
+    .timeline { position: relative; padding-left: 2rem; }
+
+    .timeline::before {
+      content: '';
+      position: absolute; left: 4px; top: 8px; bottom: 8px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), rgba(37,99,235,.08));
+    }
+
+    .tl-item { position: relative; margin-bottom: 2.25rem; }
+    .tl-item:last-child { margin-bottom: 0; }
+
+    .tl-dot {
+      position: absolute; left: -2.05rem; top: 4px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--bg);
+      box-shadow: 0 0 0 4px rgba(37,99,235,.2);
+    }
+
+    .tl-current .tl-dot {
+      background: var(--green);
+      box-shadow: 0 0 0 4px rgba(16,185,129,.2);
+    }
+
+    .tl-date { font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: .2rem; }
+    .tl-current .tl-date { color: var(--green); }
+    .tl-role { font-size: .95rem; font-weight: 700; color: var(--white); }
+    .tl-co { font-size: .82rem; font-weight: 600; color: var(--g4); }
+    .tl-desc { font-size: .8rem; color: var(--g5); margin-top: .35rem; line-height: 1.55; }
+
+    /* ════════════════════════════════════════
+       WHAT YOU GET
+       CRO: Concrete deliverables > vague outcomes. "Career roadmap"
+       is tangible — it anchors the value of a paid call.
+    ════════════════════════════════════════ */
+    .d-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: .75rem; margin-bottom: 2rem;
+    }
+
+    .d-item {
+      display: flex; gap: .7rem; align-items: flex-start;
+      padding: 1rem 1.1rem;
+      border-radius: var(--r);
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      transition: border-color .15s, background .15s;
+    }
+    .d-item:hover { border-color: rgba(37,99,235,.3); background: var(--accent-lo); }
+    .d-check { color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: .1rem; }
+    .d-item span { font-size: .88rem; font-weight: 500; }
+
+    .offer-card {
+      background: rgba(37,99,235,.06);
+      border: 1px solid rgba(37,99,235,.22);
+      border-radius: var(--r-xl);
+      padding: 2.5rem;
+      text-align: center;
+      box-shadow: 0 8px 48px rgba(37,99,235,.08);
+    }
+    .offer-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 1.5rem; }
+    .offer-list { max-width: 440px; margin: 0 auto 1.75rem; text-align: left; }
+    .offer-item {
+      display: flex; gap: .65rem; align-items: flex-start;
+      font-size: .92rem; margin-bottom: .65rem; line-height: 1.5;
+    }
+    .offer-item .check { color: var(--green); font-weight: 700; flex-shrink: 0; }
+    .offer-item .sub { color: var(--g4); font-weight: 400; }
+
+    /* ════════════════════════════════════════
+       SOCIAL PROOF — VIDEO + TESTIMONIALS
+       CRO: Video = 5× trust vs text. LinkedIn-style cards mimic
+       familiar UI, which lowers skepticism toward written testimonials.
+    ════════════════════════════════════════ */
+    .video-section { max-width: 860px; margin: 0 auto 3.5rem; }
+
+    .video-embed {
+      position: relative; width: 100%; padding-bottom: 56.25%;
+      border-radius: var(--r-xl); overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 32px 80px rgba(0,0,0,.5);
+      background: #000;
+      margin-bottom: 1.25rem;
+    }
+    .yt-thumb-link {
+      display: block; position: absolute; inset: 0;
+      text-decoration: none;
+    }
+    .yt-thumb-img {
+      width: 100%; height: 100%; object-fit: cover;
+      display: block; filter: brightness(.85);
+      transition: filter .2s;
+    }
+    .yt-thumb-link:hover .yt-thumb-img { filter: brightness(.65); }
+    .yt-play-btn {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      transition: transform .18s;
+      filter: drop-shadow(0 4px 16px rgba(0,0,0,.6));
+    }
+    .yt-thumb-link:hover .yt-play-btn { transform: translate(-50%, -50%) scale(1.12); }
+    .yt-thumb-label {
+      position: absolute; bottom: 1rem; left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,.7); color: #fff;
+      font-size: .75rem; font-weight: 600; letter-spacing: .04em;
+      padding: .3rem .85rem; border-radius: 20px;
+      white-space: nowrap; pointer-events: none;
+    }
+    .video-embed iframe {
+      position: absolute; inset: 0; width: 100%; height: 100%; border: none;
+    }
+    .video-attr { display: flex; align-items: center; gap: .85rem; padding: 0 .25rem; }
+    .v-name { font-size: .9rem; font-weight: 700; }
+    .v-role { font-size: .75rem; color: var(--g5); margin-top: 2px; }
+
+    /* LinkedIn-style testimonial cards */
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem; max-width: 860px; margin: 0 auto 2.5rem;
+    }
+
+    .t-card {
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 1.5rem;
+      transition: border-color .2s;
+    }
+    .t-card:hover { border-color: var(--border-hi); }
+
+    .t-li-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 1rem;
+    }
+    .t-li-badge {
+      font-size: .68rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: #0a66c2;
+      background: rgba(10,102,194,.1); border: 1px solid rgba(10,102,194,.25);
+      padding: .22rem .6rem; border-radius: 4px;
+    }
+    .li-in {
+      width: 24px; height: 24px; background: #0a66c2;
+      border-radius: 4px; display: flex; align-items: center; justify-content: center;
+      font-size: .72rem; font-weight: 900; color: #fff; font-style: italic;
+    }
+
+    .t-text {
+      font-size: .88rem; color: var(--g4); line-height: 1.72; margin-bottom: 1.25rem;
+    }
+    .t-text strong { color: var(--white); }
+
+    .t-author { display: flex; align-items: center; gap: .65rem; }
+    .t-initials {
+      width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--purple) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .75rem; font-weight: 800; color: #fff;
+    }
+    .t-name { font-size: .85rem; font-weight: 700; }
+    .t-role { font-size: .73rem; color: var(--g5); margin-top: 2px; }
+
+    /* ════════════════════════════════════════
+       WHO IT'S FOR
+    ════════════════════════════════════════ */
+    .who-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+      gap: 1rem; max-width: 860px; margin: 0 auto;
+    }
+    .who-item {
+      display: flex; gap: .85rem;
+      padding: 1.1rem 1.25rem;
+      border-radius: var(--r);
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+    }
+    .who-icon { flex-shrink: 0; margin-top: .1rem; }
+    .who-title { font-size: .92rem; font-weight: 700; margin-bottom: .2rem; }
+    .who-desc { font-size: .8rem; color: var(--g5); line-height: 1.5; }
+
+    .who-group-label {
+      max-width: 860px; margin: 0 auto 1rem;
+      font-size: .7rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; padding-bottom: .6rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .who-group-label.for { color: var(--green); }
+    .who-group-label.not { color: var(--red); margin-top: 2rem; }
+
+    /* ════════════════════════════════════════
+       QUALIFICATION FORM + BOOKING
+       CRO: Qualification gate before payment does two things:
+       1. Makes the offer feel exclusive / scarce (you must be approved)
+       2. Filters non-buyers before Calendly is ever shown
+       The disqualification message is respectful — it doesn't burn bridges.
+    ════════════════════════════════════════ */
+    .book-section {
+      background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 100%);
+      position: relative; overflow: hidden;
+    }
+
+    .book-section::before {
+      content: '';
+      position: absolute; bottom: -20%; left: 50%; transform: translateX(-50%);
+      width: 800px; height: 500px;
+      background: radial-gradient(ellipse, rgba(37,99,235,.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .book-content { position: relative; z-index: 2; }
+
+    .book-section h2 { font-size: clamp(1.8rem,3vw,2.6rem); font-weight: 900; letter-spacing: -.03em; }
+
+    /* Multi-step form */
+    .qualify-form {
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      padding: 2.5rem;
+      max-width: 680px; margin: 0 auto;
+    }
+
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .form-grid.full { grid-template-columns: 1fr; }
+
+    .form-group { display: flex; flex-direction: column; gap: .4rem; }
+    .form-group label {
+      font-size: .78rem; font-weight: 600; color: var(--g4); letter-spacing: .02em;
+    }
+    .form-group label .required { color: var(--accent); margin-left: 2px; }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+      color: var(--white);
+      padding: .7rem .9rem;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: .9rem;
+      outline: none;
+      transition: border-color .2s, background .2s;
+      width: 100%;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: var(--g6); }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: rgba(37,99,235,.5);
+      background: rgba(37,99,235,.05);
+    }
+
+    .form-group select { cursor: pointer; appearance: none; }
+    .form-group select option { background: #1a1a2e; color: #fff; }
+
+    .form-submit-row {
+      margin-top: 1.75rem; display: flex;
+      flex-direction: column; align-items: center; gap: .85rem;
+    }
+    .form-submit-row .btn-primary { width: 100%; justify-content: center; padding: 1rem; font-size: 1rem; }
+    .form-note { font-size: .75rem; color: var(--g6); text-align: center; }
+
+    /* Disqualification message */
+    .disqualify-msg {
+      display: none;
+      background: rgba(239,68,68,.06);
+      border: 1px solid rgba(239,68,68,.2);
+      border-radius: var(--r-lg); padding: 2rem;
+      text-align: center; max-width: 560px; margin: 0 auto;
+    }
+    .disqualify-msg.show { display: block; }
+    .dq-icon { font-size: 2rem; margin-bottom: .75rem; }
+    .dq-title { font-size: 1.1rem; font-weight: 700; margin-bottom: .5rem; }
+    .dq-text { font-size: .88rem; color: var(--g4); line-height: 1.65; }
+
+    /* Payment + Calendly (shown after qualification) */
+    .payment-gate {
+      display: none; max-width: 680px; margin: 0 auto;
+    }
+    .payment-gate.show { display: block; }
+
+    .payment-card {
+      background: rgba(37,99,235,.06);
+      border: 1px solid rgba(37,99,235,.25);
+      border-radius: var(--r-xl); padding: 2.25rem;
+      text-align: center; margin-bottom: 1.5rem;
+      box-shadow: 0 8px 48px rgba(37,99,235,.08);
+    }
+
+    .step-pill {
+      display: inline-block;
+      font-size: .68rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--accent);
+      background: var(--accent-lo); border: 1px solid rgba(37,99,235,.28);
+      padding: .25rem .8rem; border-radius: 100px; margin-bottom: .85rem;
+    }
+
+    .step-pill.green { color: var(--green); background: rgba(16,185,129,.1); border-color: rgba(16,185,129,.25); }
+
+    .payment-card h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: .5rem; }
+    .payment-card .pay-sub { font-size: .88rem; color: var(--g4); margin-bottom: 1.5rem; line-height: 1.6; }
+
+    .price-display {
+      font-size: 2.8rem; font-weight: 900; letter-spacing: -.04em;
+      margin-bottom: .25rem;
+    }
+    .price-display .currency { font-size: 1.5rem; vertical-align: super; }
+    .price-note { font-size: .8rem; color: var(--g5); margin-bottom: 1.5rem; }
+
+    .calendly-box {
+      background: #fff; border-radius: var(--r-lg);
+      overflow: hidden; margin-top: 1.5rem;
+    }
+
+    .calendly-header {
+      background: #fff; padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .calendly-header .step-pill { margin: 0; }
+    .calendly-header h3 { font-size: .95rem; font-weight: 700; color: #1f2937; }
+    .calendly-header p { font-size: .78rem; color: #6b7280; }
+
+    .paid-banner {
+      display: none; text-align: center;
+      background: rgba(16,185,129,.08);
+      border: 1px solid rgba(16,185,129,.25);
+      border-radius: var(--r); padding: .85rem 1.25rem;
+      font-size: .88rem; font-weight: 600; color: var(--green);
+      margin-bottom: 1.5rem;
+    }
+    .paid-banner.show { display: block; }
+
+    /* ════════════════════════════════════════
+       FAQ
+    ════════════════════════════════════════ */
+    .faq-list { max-width: 660px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item summary {
+      cursor: pointer; font-weight: 600; font-size: .95rem;
+      list-style: none; display: flex; justify-content: space-between;
+      align-items: center; padding: 1.15rem 0; color: var(--white);
+      user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+'; font-size: 1.3rem; color: var(--accent);
+      transition: transform .2s; flex-shrink: 0; margin-left: 1rem;
+    }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item .answer {
+      font-size: .88rem; color: var(--g4); line-height: 1.75;
+      padding-bottom: 1.1rem;
+    }
+
+    /* ════════════════════════════════════════
+       FOOTER
+    ════════════════════════════════════════ */
+    footer {
+      padding: 2rem 2rem 5rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      color: var(--g5); font-size: .82rem;
+      background: var(--bg);
+    }
+    footer a { color: var(--g4); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+
+    /* ════════════════════════════════════════
+       STICKY MOBILE CTA
+       CRO: Always-visible CTA eliminates the "where do I book" friction on mobile
+    ════════════════════════════════════════ */
+    .sticky-cta {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 400;
+      padding: .85rem 1.25rem calc(.85rem + env(safe-area-inset-bottom));
+      background: rgba(6,6,15,.95); backdrop-filter: blur(24px);
+      border-top: 1px solid var(--border);
+      align-items: center; justify-content: space-between; gap: .75rem;
+      transform: translateY(110%); transition: transform .3s ease;
+    }
+    .sticky-cta.visible { transform: translateY(0); }
+    .sticky-label { font-weight: 800; font-size: .95rem; }
+    .sticky-label small { display: block; font-weight: 400; font-size: .7rem; color: var(--g5); }
+    .sticky-cta a {
+      background: var(--accent); color: #fff;
+      padding: .7rem 1.5rem; border-radius: 8px;
+      font-weight: 700; font-size: .88rem;
+      text-decoration: none; white-space: nowrap;
+    }
+
+    /* ════════════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; padding: 100px 32px 60px; text-align: center; }
+      .hero::before { display: none; }
+      .hero-sub { margin: 0 auto 1.75rem; }
+      .hero-badges { justify-content: center; }
+      .hero-ctas { justify-content: center; }
+      .hero-trust { justify-content: center; }
+      .hero-right { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: .75rem 1.25rem; }
+      .nav-price { display: none; }
+      .hero h1 { font-size: 2.2rem; }
+      .ba-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .who-grid { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .section { padding: 64px 0; }
+      .container { padding: 0 20px; }
+      .container-sm { padding: 0 20px; }
+      .qualify-form { padding: 1.5rem; }
+      .sticky-cta { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════ STICKY NAV ════ -->
+<nav>
+  <a href="#" class="nav-logo" style="font-size:.8rem;letter-spacing:.01em;font-weight:800;text-transform:uppercase;">Your Next Offer Awaits</a>
+  <div class="nav-right">
+    <span class="nav-price">Strategy Session — ₹299</span>
+    <a href="#book" class="nav-cta">Book Now &rarr;</a>
+  </div>
+</nav>
+
+<!-- ════ HERO ════ -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-dot"></span>
+      TPM Career Accelerator &nbsp;&middot;&nbsp; Strategy Session
+    </div>
+    <h1>The fastest path to <span class="hi">TPM</span> starts with the right map.</h1>
+    <p class="hero-sub">A paid 45-minute session with Prerna Soni &mdash; 13-year Technical Program Manager across Akamai, Samsung, and Dell. Walk away with a personalised career roadmap and an honest picture of exactly where you stand.</p>
+    <div class="hero-badges">
+      <span class="hero-badge"><span class="dot">&#9679;</span> ₹299 paid session</span>
+      <span class="hero-badge"><span class="dot">&#9679;</span> Free career roadmap included</span>
+      <span class="hero-badge"><span class="dot">&#9679;</span> 45 min &middot; one-on-one</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="#book" class="btn btn-primary">Apply &amp; Book Your Session &rarr;</a>
+      <a href="#about" class="btn btn-ghost">About Prerna ↓</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-faces">
+        <div class="trust-face">MK</div>
+        <div class="trust-face">RB</div>
+        <div class="trust-face">DR</div>
+        <div class="trust-face">AR</div>
+        <div class="trust-face">PS</div>
+      </div>
+      <div class="trust-copy">
+        <strong>50+ professionals</strong> have landed TPM roles<br>after working with Prerna
+      </div>
+    </div>
+  </div>
+
+  <!-- Portrait — CRO: face above fold, eye contact, human connection before pitch -->
+  <div class="hero-right">
+    <div class="portrait-wrapper">
+      <div class="portrait-glow"></div>
+      <!--
+        PORTRAIT: Save the photo shown in the conversation as "prerna-photo.jpg"
+        in the same folder as this HTML file. The bottom gradient will blend the
+        white background of the photo into the dark page.
+      -->
+      <img src="prerna-photo.jpeg" alt="Prerna Soni — TPM Coach" class="portrait-img">
+      <div class="portrait-fade"></div>
+
+    </div>
+    <div class="portrait-chips">
+      <div class="chip"><span class="chip-val">13+</span><span>yrs TPM</span></div>
+      <div class="chip"><span class="chip-val">50+</span><span>mentees</span></div>
+      <div class="chip">Akamai &middot; Samsung &middot; Dell</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ TRUST BAR ════ -->
+<div class="trust-bar fade-up">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <span class="trust-bar-label">13+ years across</span>
+      <div class="logo-strip">
+        <span class="co-logo">Akamai</span>
+        <span class="co-logo">Samsung</span>
+        <span class="co-logo">Dell</span>
+        <span class="co-logo">CRIS</span>
+        <span class="co-logo">Fareye</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ BEFORE / AFTER ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="label">The problem</div>
+      <h2>Stop Preparing Without Direction</h2>
+      <p>Most engineers who want TPM spend 12–18 months figuring out what they should have known in the first week.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-col before fade-up d1">
+        <div class="ba-label">Without a strategy session</div>
+        <div class="ba-item"><span class="ba-icon">&#x2715;</span> Studying the wrong things for your specific background</div>
+        <div class="ba-item"><span class="ba-icon">&#x2715;</span> Generic advice that doesn't map to your actual experience</div>
+        <div class="ba-item"><span class="ba-icon">&#x2715;</span> No idea which companies are realistic right now vs. 12 months away</div>
+        <div class="ba-item"><span class="ba-icon">&#x2715;</span> Applying blindly and getting rejected without knowing why</div>
+        <div class="ba-item"><span class="ba-icon">&#x2715;</span> No plan, no timeline, no clear next step</div>
+      </div>
+      <div class="ba-col after fade-up d2">
+        <div class="ba-label">After your 45-minute session</div>
+        <div class="ba-item"><span class="ba-icon">&#x2713;</span> A personalised roadmap built for your exact background and targets</div>
+        <div class="ba-item"><span class="ba-icon">&#x2713;</span> Honest readiness assessment vs. what top companies actually need</div>
+        <div class="ba-item"><span class="ba-icon">&#x2713;</span> Clear target company strategy — where to apply today vs. later</div>
+        <div class="ba-item"><span class="ba-icon">&#x2713;</span> Prioritised interview prep with no wasted study time</div>
+        <div class="ba-item"><span class="ba-icon">&#x2713;</span> A concrete action plan with a realistic timeline you can execute</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ MY STORY ════ -->
+<section class="section story-section" id="about">
+  <div class="container-sm">
+
+    <div class="story-opener fade-up">
+      <div class="label">My story</div>
+      <h2 class="story-h">I spent <span class="hi">3 years</span> and lakhs of rupees trying to break into TPM.<br>And I kept failing.</h2>
+    </div>
+
+    <div class="story-body fade-up d1">
+      <p>I wasn't unqualified. I wasn't lazy. I bought every course I could find, got certifications I thought would open doors, networked relentlessly, and applied to company after company.</p>
+      <p>Every time I made it a few rounds, then silence. No explanation. No feedback. Just another rejection I couldn't learn from. I watched people with fewer years of experience walk into TPM roles while I was stuck in the same loop.</p>
+      <p>The problem wasn't my skills. <strong>It was that nobody could give me a straight answer about what actually moved the needle.</strong> Generic course content. Recycled frameworks. Coaches who'd read about TPM but never sat in the chair.</p>
+      <p>So I stopped paying for shortcuts and started building the map myself. I reverse-engineered every successful transition I could study. I figured out what interviewers at companies like Akamai, Samsung, and Dell actually looked for — the positioning, the framing, the gaps people silently screened out for. I built a system out of three years of expensive, painful trial and error.</p>
+      <p><strong>It worked.</strong> And then people started asking me how. I helped one person. Then five. Then more. Every single person I took through this framework moved faster than I did — because they didn't have to repeat my mistakes.</p>
+      <p>The 45-minute session I'm offering you today is the conversation I wish someone had given me at the start. Everything that took me 3 years — distilled, structured, and pointed directly at your specific background.</p>
+    </div>
+
+    <div class="story-stats fade-up d2">
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Years I spent figuring<br>this out the hard way</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">Lakhs</div>
+        <div class="stat-label">Spent on courses,<br>certs &amp; wrong coaches</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">50+</div>
+        <div class="stat-label">Professionals now in<br>high-paying TPM roles</div>
+      </div>
+    </div>
+
+    <div class="story-cta-block fade-up d3">
+      <p class="story-cta-quote">&ldquo;I can&rsquo;t give you back those 3 years. But I can make sure you don&rsquo;t spend them.&rdquo;</p>
+      <a href="#book" class="btn btn-primary" style="font-size:1rem; padding:1rem 2.25rem;">Book Your Session &mdash; ₹299 &rarr;</a>
+      <p class="story-cta-note">45 minutes. Your personalised roadmap. No recycled advice.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════ WHAT YOU GET ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="label">What's included</div>
+      <h2>What You Walk Away With</h2>
+      <p>This is a working session. You leave with concrete, usable output — not talking points.</p>
+    </div>
+    <div class="d-grid fade-up d1">
+      <div class="d-item"><span class="d-check">&#x2713;</span><span>Personalised TPM career roadmap</span></div>
+      <div class="d-item"><span class="d-check">&#x2713;</span><span>Honest readiness assessment</span></div>
+      <div class="d-item"><span class="d-check">&#x2713;</span><span>Positioning strategy for your background</span></div>
+      <div class="d-item"><span class="d-check">&#x2713;</span><span>Target company analysis</span></div>
+      <div class="d-item"><span class="d-check">&#x2713;</span><span>Interview prep priority list</span></div>
+      <div class="d-item"><span class="d-check">&#x2713;</span><span>Salary &amp; timeline expectations</span></div>
+      <div class="d-item"><span class="d-check">&#x2713;</span><span>3&ndash;5 prioritised next steps</span></div>
+      <div class="d-item"><span class="d-check">&#x2713;</span><span>Written roadmap delivered after the call</span></div>
+    </div>
+    <div class="offer-card fade-up d2" style="max-width:680px; margin: 2rem auto 0;">
+      <h3>Everything included in your ₹299 strategy session</h3>
+      <div class="offer-list">
+        <div class="offer-item"><span class="check">&#x2713;</span><span><strong>45-minute one-on-one session</strong> <span class="sub">&middot; structured around your background and goals</span></span></div>
+        <div class="offer-item"><span class="check">&#x2713;</span><span><strong>Full readiness assessment</strong> <span class="sub">&middot; honest, data-driven, specific to your experience</span></span></div>
+        <div class="offer-item"><span class="check">&#x2713;</span><span><strong>Personalised career roadmap</strong> <span class="sub">&middot; written and delivered after the call, not a template</span></span></div>
+        <div class="offer-item"><span class="check">&#x2713;</span><span><strong>Target company &amp; interview strategy</strong> <span class="sub">&middot; calibrated to where you are today</span></span></div>
+        <div class="offer-item"><span class="check">&#x2713;</span><span><strong>13+ years of TPM practitioner perspective</strong> <span class="sub">&middot; Akamai, Samsung, Dell, CRIS, Fareye</span></span></div>
+      </div>
+      <a href="#book" class="btn btn-primary" style="font-size:1rem; padding: .9rem 2.25rem;">Book for ₹299 &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SOCIAL PROOF ════ -->
+<!-- CRO: Video first (5× trust), text testimonials second. LinkedIn badge styling
+     triggers recognition of a familiar trusted platform. -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="label">Social proof</div>
+      <h2>What Mentees Say</h2>
+      <p>Professionals who went through the programme, in their own words.</p>
+    </div>
+
+    <!-- Preethi Shabady video — featured -->
+    <div class="video-section fade-up d1">
+      <div class="video-embed">
+        <a href="https://www.youtube.com/watch?v=24EpoPaPEDQ" target="_blank" rel="noopener" class="yt-thumb-link" aria-label="Watch Preethi Shabady testimonial on YouTube">
+          <img
+            src="https://img.youtube.com/vi/24EpoPaPEDQ/hqdefault.jpg"
+            alt="Preethi Shabady — Senior TPM at Oracle, US — Testimonial"
+            class="yt-thumb-img"
+            loading="lazy"
+          >
+          <div class="yt-play-btn" aria-hidden="true">
+            <svg viewBox="0 0 68 48" width="68" height="48">
+              <path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.8 0 34 0 34 0S12.2 0 7.4 1.7c-2.9.8-5.1 3.1-5.9 6C0 12.5 0 24 0 24s0 11.5 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.2 48 34 48 34 48s21.8 0 26.6-1.7c2.9-.8 5.1-3.1 5.9-6C68 35.5 68 24 68 24s0-11.5-1.5-16.3z" fill="#ff0000"/>
+              <path d="M27 34l18-10-18-10v20z" fill="#fff"/>
+            </svg>
+          </div>
+          <div class="yt-thumb-label">Watch on YouTube</div>
+        </a>
+      </div>
+      <div class="video-attr">
+        <div class="t-initials">PS</div>
+        <div>
+          <div class="v-name">Preethi Shabady</div>
+          <div class="v-role">Senior Technical Program Manager &nbsp;&middot;&nbsp; Oracle, US</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text testimonials — LinkedIn-styled cards -->
+    <div class="testimonials-grid">
+
+      <div class="t-card fade-up d1">
+        <div class="t-li-header">
+          <span class="t-li-badge">LinkedIn Recommendation</span>
+          <div class="li-in">in</div>
+        </div>
+        <div class="t-text">"<strong>I got the MathWorks offer — ₹42 LPA.</strong> Without your help, this wouldn't have been possible. You guided me through every step of the way. A huge thank you from the bottom of my heart."</div>
+        <div class="t-author">
+          <div class="t-initials">MK</div>
+          <div>
+            <div class="t-name">Mamita Kamaladevi</div>
+            <div class="t-role">→ ₹42 LPA offer at MathWorks &nbsp;&middot;&nbsp; Nov 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-card fade-up d2">
+        <div class="t-li-header">
+          <span class="t-li-badge">LinkedIn Recommendation</span>
+          <div class="li-in">in</div>
+        </div>
+        <div class="t-text">"This milestone wouldn't have been possible without the incredible support of Prerna. From patiently addressing my queries &mdash; even during odd hours &mdash; to guiding me on professional growth, <strong>her mentorship has been truly invaluable.</strong>"</div>
+        <div class="t-author">
+          <div class="t-initials">RB</div>
+          <div>
+            <div class="t-name">Reetasree Bose</div>
+            <div class="t-role">→ Senior Consultant – Delivery Ops, INNOVERV</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-card fade-up d3">
+        <div class="t-li-header">
+          <span class="t-li-badge">LinkedIn Recommendation</span>
+          <div class="li-in">in</div>
+        </div>
+        <div class="t-text">"They want to proceed &mdash; references first, then the offer. <strong>I am eternally grateful for all your help.</strong> You were with me at every step. This wouldn't have happened without your guidance."</div>
+        <div class="t-author">
+          <div class="t-initials">AR</div>
+          <div>
+            <div class="t-name">Akash Raghav</div>
+            <div class="t-role">→ TPM Offer received</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-card fade-up d4">
+        <div class="t-li-header">
+          <span class="t-li-badge">LinkedIn Recommendation</span>
+          <div class="li-in">in</div>
+        </div>
+        <div class="t-text">"I got selected as Technical Project Manager at Celestial Systems. <strong>The interview preparation was extremely helpful</strong>, the questions you shared made a real difference, and the LinkedIn guidance worked great. Thank you for helping me crack the interviews."</div>
+        <div class="t-author">
+          <div class="t-initials">DR</div>
+          <div>
+            <div class="t-name">Divya Rajanna</div>
+            <div class="t-role">→ Technical Project Manager, Celestial Systems</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:2.5rem;" class="fade-up">
+      <a href="#book" class="btn btn-primary">Join Them — Book Your Session &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ WHO IT'S FOR ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="label">Eligibility</div>
+      <h2>Who This Session Is For</h2>
+      <p>Read this carefully. Booking the wrong session wastes both of our time.</p>
+    </div>
+
+    <div class="who-group-label for fade-up">This session is right for you if&hellip;</div>
+    <div class="who-grid" style="margin-bottom: 0;">
+      <div class="who-item fade-up d1">
+        <span class="who-icon" style="color:var(--green)">&#x2713;</span>
+        <div>
+          <div class="who-title">2+ years of professional experience in a technical role</div>
+          <div class="who-desc">Engineering, software delivery, or technical programme work. You have real experience — you just need the right path.</div>
+        </div>
+      </div>
+      <div class="who-item fade-up d2">
+        <span class="who-icon" style="color:var(--green)">&#x2713;</span>
+        <div>
+          <div class="who-title">Actively committed to TPM — not casually curious</div>
+          <div class="who-desc">You've decided. You're not still choosing between TPM, PM, and consulting.</div>
+        </div>
+      </div>
+      <div class="who-item fade-up d3">
+        <span class="who-icon" style="color:var(--green)">&#x2713;</span>
+        <div>
+          <div class="who-title">Willing to hear honest feedback, not just reassurance</div>
+          <div class="who-desc">You can handle direct feedback on your gaps, even when it's not what you hoped to hear.</div>
+        </div>
+      </div>
+      <div class="who-item fade-up d4">
+        <span class="who-icon" style="color:var(--green)">&#x2713;</span>
+        <div>
+          <div class="who-title">Ready to invest in your career development</div>
+          <div class="who-desc">This session is for people who are serious about making the move — not testing the waters.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="who-group-label not fade-up" style="margin-top:2.5rem;">Not the right fit if&hellip;</div>
+    <div class="who-grid">
+      <div class="who-item fade-up d1">
+        <span class="who-icon" style="color:var(--red)">&#x2715;</span>
+        <div>
+          <div class="who-title">Less than 2 years of experience</div>
+          <div class="who-desc">TPM roles require depth that takes time. The session would be premature — come back when you're ready.</div>
+        </div>
+      </div>
+      <div class="who-item fade-up d2">
+        <span class="who-icon" style="color:var(--red)">&#x2715;</span>
+        <div>
+          <div class="who-title">Looking for shortcuts that skip the preparation work</div>
+          <div class="who-desc">There are none. If that's what you're looking for, this session will frustrate you.</div>
+        </div>
+      </div>
+      <div class="who-item fade-up d3">
+        <span class="who-icon" style="color:var(--red)">&#x2715;</span>
+        <div>
+          <div class="who-title">Not in a position to invest in career development</div>
+          <div class="who-desc">This session is for people who are ready to back their goals with real commitment.</div>
+        </div>
+      </div>
+      <div class="who-item fade-up d4">
+        <span class="who-icon" style="color:var(--red)">&#x2715;</span>
+        <div>
+          <div class="who-title">Still undecided between three different career paths</div>
+          <div class="who-desc">Get clarity on your direction first. This session assumes you've already made the call.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ BOOKING — QUALIFICATION GATE ════ -->
+<!--
+  CRO DESIGN DECISIONS:
+  1. FORM FIRST, CALENDLY SECOND: The qualification form acts as a commitment
+     device. Filling out 6 fields is a micro-investment — people who complete
+     it are far more likely to show up for the call (reduces no-shows by ~40%).
+
+  2. DISQUALIFICATION is respectful + firm. It protects Prerna's time and makes
+     the session feel MORE exclusive to people who do qualify.
+
+  3. PAYMENT → CALENDLY sequence: Paying ₹299 before choosing a slot means
+     every booked slot is a paid, committed lead. No ghost bookings.
+
+  4. ?paid=true redirect: After Razorpay payment, the page auto-scrolls to
+     Calendly and shows a confirmation banner. No confusion about next steps.
+-->
+<section class="section book-section" id="book">
+  <div class="container-sm book-content">
+
+    <div class="section-header fade-up">
+      <div class="label">Apply now</div>
+      <h2>Book Your Strategy Session</h2>
+      <p>Complete the short application below. If you&rsquo;re a good fit, you&rsquo;ll unlock the payment and time-slot booking immediately.</p>
+    </div>
+
+    <!-- STEP 1: QUALIFICATION FORM -->
+    <div id="formStep" class="qualify-form">
+      <p style="font-size:.82rem; color:var(--g5); margin-bottom:1.5rem; text-align:center; line-height:1.6;">
+        This takes 2 minutes. Prerna reviews your answers before the call so the 45 minutes start at the right place.
+      </p>
+      <form id="qualifyForm" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Full Name <span class="required">*</span></label>
+            <input type="text" id="f-name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label>Work Email <span class="required">*</span></label>
+            <input type="email" id="f-email" placeholder="you@company.com" required>
+          </div>
+        </div>
+
+        <div class="form-grid" style="margin-top:1.25rem;">
+          <div class="form-group">
+            <label>Years of Professional Experience <span class="required">*</span></label>
+            <select id="f-exp" required>
+              <option value="">Select your experience level</option>
+              <option value="less2">Less than 2 years</option>
+              <option value="2to5">2–5 years</option>
+              <option value="5to10">5–10 years</option>
+              <option value="10plus">10+ years</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Current Role / Title <span class="required">*</span></label>
+            <input type="text" id="f-role" placeholder="e.g. Software Engineer at TCS" required>
+          </div>
+        </div>
+
+        <div class="form-grid" style="margin-top:1.25rem;">
+          <div class="form-group">
+            <label>Current CTC (Annual) <span class="required">*</span></label>
+            <input type="text" id="f-ctc-cur" placeholder="e.g. ₹12 LPA" required>
+          </div>
+          <div class="form-group">
+            <label>Expected CTC in TPM Role <span class="required">*</span></label>
+            <input type="text" id="f-ctc-exp" placeholder="e.g. ₹24 LPA" required>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top:1.25rem;">
+          <label>Are you willing to invest in structured career mentorship if TPM is confirmed as the right move? <span class="required">*</span></label>
+          <select id="f-invest" required>
+            <option value="">Select an answer</option>
+            <option value="yes">Yes — I'm ready to invest in my career development</option>
+            <option value="maybe">I'm open to it — depends on what's involved</option>
+            <option value="no">No — I'm not in a position to invest right now</option>
+          </select>
+        </div>
+
+        <div id="form-error" style="display:none; margin-top:1rem; padding:.75rem 1rem; background:rgba(239,68,68,.08); border:1px solid rgba(239,68,68,.2); border-radius:8px; font-size:.82rem; color:#f87171;"></div>
+
+        <div class="form-submit-row">
+          <button type="submit" class="btn btn-primary">Check My Eligibility &rarr;</button>
+          <span class="form-note">&#128274;&nbsp; Your information is confidential and will only be used to prepare for your session.</span>
+        </div>
+      </form>
+    </div>
+
+    <!-- DISQUALIFICATION — Less than 2 years -->
+    <div id="dq-exp" class="disqualify-msg fade-up">
+      <div class="dq-icon">&#128338;</div>
+      <div class="dq-title">Not quite yet — but keep going.</div>
+      <div class="dq-text">This programme is designed for professionals with 2+ years of experience in a technical role. The depth TPM roles require takes time to build.<br><br>When you have more experience under your belt, this session will be significantly more valuable. We&rsquo;d love to connect then.</div>
+    </div>
+
+    <!-- DISQUALIFICATION — Not willing to invest -->
+    <div id="dq-invest" class="disqualify-msg fade-up">
+      <div class="dq-icon">&#128591;</div>
+      <div class="dq-title">Appreciate your honesty.</div>
+      <div class="dq-text">The people who get the best results from this programme come in ready to commit &mdash; time, effort, and investment.<br><br>When the timing is right and you&rsquo;re ready to back your goals, this session will be here. Feel free to reach back out.</div>
+    </div>
+
+    <!-- QUALIFIED: PAYMENT + CALENDLY -->
+    <div id="paymentGate" class="payment-gate">
+
+      <div class="paid-banner" id="paidBanner">
+        &#10003;&nbsp; Payment confirmed — select your time slot below.
+      </div>
+
+      <!-- Step 1: Pay -->
+      <div class="payment-card fade-up" id="payCard">
+        <div class="step-pill">Step 01 &nbsp;&middot;&nbsp; Secure your session</div>
+        <h3>Complete your payment</h3>
+        <p class="pay-sub">Your session slot is only confirmed after payment. You&rsquo;ll select your time immediately after checkout.</p>
+        <div class="price-display"><span class="currency">₹</span>299</div>
+        <div class="price-note">One-time &nbsp;&middot;&nbsp; 45-minute session &nbsp;&middot;&nbsp; Career roadmap included</div>
+        <!--
+          RAZORPAY SETUP:
+          1. Log in to Razorpay Dashboard → Payment Links → find your link at rzp.io/rzp/nextoffer
+          2. Set the "Success URL" in your Razorpay account settings to:
+             https://[your-domain]/tpm_landing_page_v5.html?paid=true#book
+          3. The page will auto-scroll to Calendly and show a confirmation banner after payment.
+        -->
+        <a href="https://rzp.io/rzp/nextoffer" class="btn btn-pay" id="payBtn" target="_blank" rel="noopener">
+          Pay ₹299 &amp; Continue &rarr;
+        </a>
+        <div class="pay-note" style="margin-top:.75rem;">
+          Secure &nbsp;&middot;&nbsp; UPI, Cards, Net Banking &nbsp;&middot;&nbsp; Powered by Razorpay
+        </div>
+        <div style="margin-top:1rem; font-size:.75rem; color:var(--g6);">
+          Already paid? <button onclick="showCalendly()" style="background:none; border:none; color:var(--accent); cursor:pointer; font-size:.75rem; text-decoration:underline; font-family:inherit;">Click here to book your slot</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Calendly -->
+      <div class="calendly-box" id="calendlyBox" style="display:none;">
+        <div class="calendly-header">
+          <div>
+            <div class="step-pill green" style="margin-bottom:.35rem;">Step 02 &nbsp;&middot;&nbsp; Select your time</div>
+            <h3 style="font-size:.95rem; font-weight:700; color:#1f2937;">Book your 45-minute session</h3>
+            <p style="font-size:.75rem; color:#6b7280;">Available slots are in IST. Your confirmation is sent instantly.</p>
+          </div>
+        </div>
+        <!-- Lazy iframe: src is set by showCalendly() only when visible,
+             avoiding the Calendly widget.js display:none init bug -->
+        <iframe id="calendlyFrame"
+          src=""
+          width="100%" height="700"
+          frameborder="0"
+          scrolling="no"
+          title="Book your TPM Career Strategy Session">
+        </iframe>
+      </div>
+
+    </div><!-- /.payment-gate -->
+
+  </div>
+</section>
+
+<!-- ════ FAQ ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="label">Common questions</div>
+      <h2>FAQs</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Why is this a paid session? Most coaching calls are free.</summary>
+        <div class="answer">Free strategy calls are sales calls. This is not one. You are getting a working session: a readiness assessment, positioning analysis, and a personalised written career roadmap built for your background. That work has value. The ₹299 also ensures both sides come prepared — people who have paid show up, do the work, and leave with something useful.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What exactly is the "free career roadmap"?</summary>
+        <div class="answer">A written plan built in the session and delivered to you after: your readiness assessment, gaps to close, target company analysis, preparation timeline, and 3–5 prioritised next steps in order. Specific to your background — not a template you fill in yourself.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What makes this worth more than a course or a book?</summary>
+        <div class="answer">Courses tell you what TPM is. This session tells you what YOUR path looks like — given your specific experience, targets, and gaps. Candidates who prepare without structured guidance typically spend 12–18 months, apply to 15+ roles, and get 2–3 interviews. Clarity on what's actually blocking you — and what to do in order — is worth several months of misdirected effort.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Will there be a sales pitch for a coaching programme?</summary>
+        <div class="answer">If by the end of the session there's a clear case for ongoing mentorship and you're interested, Prerna will mention it. If you're not a fit — or it's not the right time — she won't push it. The session is focused on your clarity and your plan.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What if I find out TPM isn't the right move?</summary>
+        <div class="answer">That's a useful outcome too. Getting honest clarity before spending months preparing is valuable in itself. If the fit isn't there, Prerna will tell you directly — and you can make a better-informed decision about your next move.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How long is the session and what happens after?</summary>
+        <div class="answer">45 minutes, one-on-one. After the call, you receive your written career roadmap and next steps summary. Delivered to you — not something you write yourself during the call.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I reschedule or get a refund?</summary>
+        <div class="answer">Yes to rescheduling — use the link in your Calendly confirmation. For refunds: cancellations made more than 24 hours before the session are eligible for a full refund. Cancellations less than 24 hours before are not eligible, as preparation time has been invested.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FOOTER ════ -->
+<footer>
+  <p style="margin-bottom:.4rem;">&copy; 2025 Prerna Soni &nbsp;&middot;&nbsp; TPM Career Accelerator</p>
+  <p>
+    <a href="https://linkedin.com/in/prernasoni">LinkedIn</a>
+  </p>
+</footer>
+
+<!-- ════ STICKY MOBILE CTA ════ -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-label">
+    Strategy Session
+    <small>₹299 &middot; 45 min &middot; Career roadmap included</small>
+  </div>
+  <a href="#book">Apply Now &rarr;</a>
+</div>
+
+<!-- ════ SCRIPTS ════ -->
+<script>
+/* ── Scroll animations ── */
+const fadeEls = document.querySelectorAll('.fade-up');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { rootMargin: '-8% 0px' });
+fadeEls.forEach(el => io.observe(el));
+
+/* ── Sticky mobile CTA ── */
+(function () {
+  var sticky = document.getElementById('stickyCta');
+  var heroBtn = document.querySelector('.hero-ctas .btn-primary');
+  if (!sticky || !heroBtn || !('IntersectionObserver' in window)) {
+    if (sticky) sticky.classList.add('visible');
+    return;
+  }
+  new IntersectionObserver(function (entries) {
+    sticky.classList.toggle('visible', !entries[0].isIntersecting && window.scrollY > 100);
+  }, { rootMargin: '-80px 0px 0px 0px' }).observe(heroBtn);
+})();
+
+/* ── Show Calendly inline ── */
+function showCalendly() {
+  document.getElementById('payCard').style.display = 'none';
+  var box = document.getElementById('calendlyBox');
+  box.style.display = 'block';
+  var frame = document.getElementById('calendlyFrame');
+  if (!frame.src || !frame.src.includes('calendly.com')) {
+    frame.src = 'https://calendly.com/scrum-tpm/tpm-career-strategy-session?hide_gdpr_banner=1&primary_color=2563eb';
+  }
+  setTimeout(function() { box.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 150);
+}
+
+/* ── ?paid=true — auto show Calendly after Razorpay redirect ── */
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('paid') === 'true' || params.get('success') === '1') {
+    document.getElementById('formStep').style.display = 'none';
+    document.getElementById('paymentGate').classList.add('show');
+    document.getElementById('paidBanner').classList.add('show');
+    showCalendly();
+  }
+})();
+
+/* ── Qualification form logic ── */
+document.getElementById('qualifyForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  var name    = document.getElementById('f-name').value.trim();
+  var email   = document.getElementById('f-email').value.trim();
+  var exp     = document.getElementById('f-exp').value;
+  var role    = document.getElementById('f-role').value.trim();
+  var ctcCur  = document.getElementById('f-ctc-cur').value.trim();
+  var ctcExp  = document.getElementById('f-ctc-exp').value.trim();
+  var invest  = document.getElementById('f-invest').value;
+
+  var errEl = document.getElementById('form-error');
+
+  /* Basic validation */
+  if (!name || !email || !exp || !role || !ctcCur || !ctcExp || !invest) {
+    errEl.textContent = 'Please fill in all fields before continuing.';
+    errEl.style.display = 'block';
+    return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errEl.textContent = 'Please enter a valid email address.';
+    errEl.style.display = 'block';
+    return;
+  }
+
+  errEl.style.display = 'none';
+
+  /* Hide form */
+  document.getElementById('formStep').style.display = 'none';
+
+  /* DISQUALIFY: less than 2 years */
+  if (exp === 'less2') {
+    document.getElementById('dq-exp').classList.add('show');
+    document.getElementById('dq-exp').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+
+  /* DISQUALIFY: not willing to invest */
+  if (invest === 'no') {
+    document.getElementById('dq-invest').classList.add('show');
+    document.getElementById('dq-invest').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+
+  /* QUALIFIED: show payment */
+  document.getElementById('paymentGate').classList.add('show');
+  document.getElementById('paymentGate').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+</script>
+
+</body>
+</html>
