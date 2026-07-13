@@ -840,7 +840,7 @@
   <a href="#" class="nav-logo" style="font-size:.8rem;letter-spacing:.01em;font-weight:800;text-transform:uppercase;">Your Next Offer Awaits</a>
   <div class="nav-right">
     <span class="nav-price">Strategy Session — ₹299</span>
-    <a href="#book" class="nav-cta">Book Now &rarr;</a>
+    <a href="https://rzp.io/rzp/nextoffer" class="nav-cta" target="_blank" rel="noopener">Book Now &rarr;</a>
   </div>
 </nav>
 
@@ -859,7 +859,7 @@
       <span class="hero-badge"><span class="dot">&#9679;</span> 45 min &middot; one-on-one</span>
     </div>
     <div class="hero-ctas">
-      <a href="#book" class="btn btn-primary">Book Your Session &mdash; ₹299 &rarr;</a>
+      <a href="https://rzp.io/rzp/nextoffer" class="btn btn-primary" target="_blank" rel="noopener">Book Your Session &mdash; ₹299 &rarr;</a>
       <a href="#about" class="btn btn-ghost">About Prerna ↓</a>
     </div>
     <div class="hero-trust">
@@ -977,7 +977,7 @@
 
     <div class="story-cta-block fade-up d3">
       <p class="story-cta-quote">&ldquo;I can&rsquo;t give you back those 3 years. But I can make sure you don&rsquo;t spend them.&rdquo;</p>
-      <a href="#book" class="btn btn-primary" style="font-size:1rem; padding:1rem 2.25rem;">Book Your Session &mdash; ₹299 &rarr;</a>
+      <a href="https://rzp.io/rzp/nextoffer" class="btn btn-primary" style="font-size:1rem; padding:1rem 2.25rem;" target="_blank" rel="noopener">Book Your Session &mdash; ₹299 &rarr;</a>
       <p class="story-cta-note">45 minutes. Your personalised roadmap. No recycled advice.</p>
     </div>
 
@@ -1011,7 +1011,7 @@
         <div class="offer-item"><span class="check">&#x2713;</span><span><strong>Target company &amp; interview strategy</strong> <span class="sub">&middot; calibrated to where you are today</span></span></div>
         <div class="offer-item"><span class="check">&#x2713;</span><span><strong>13+ years of TPM practitioner perspective</strong> <span class="sub">&middot; Akamai, Samsung, Dell, CRIS, Fareye</span></span></div>
       </div>
-      <a href="#book" class="btn btn-primary" style="font-size:1rem; padding: .9rem 2.25rem;">Book for ₹299 &rarr;</a>
+      <a href="https://rzp.io/rzp/nextoffer" class="btn btn-primary" style="font-size:1rem; padding: .9rem 2.25rem;" target="_blank" rel="noopener">Book for ₹299 &rarr;</a>
     </div>
   </div>
 </section>
@@ -1121,7 +1121,7 @@
     </div>
 
     <div style="text-align:center; margin-top:2.5rem;" class="fade-up">
-      <a href="#book" class="btn btn-primary">Join Them — Book Your Session &rarr;</a>
+      <a href="https://rzp.io/rzp/nextoffer" class="btn btn-primary" target="_blank" rel="noopener">Join Them — Book Your Session &rarr;</a>
     </div>
   </div>
 </section>
@@ -1234,7 +1234,7 @@
       </div>
 
       <!-- Step 1: Pay -->
-      <div class="payment-card fade-up" id="payCard">
+      <div class="payment-card" id="payCard">
         <div class="step-pill">Step 01 &nbsp;&middot;&nbsp; Secure your session</div>
         <h3>Complete your payment</h3>
         <p class="pay-sub">Your session slot is only confirmed after payment. You&rsquo;ll select your time immediately after checkout.</p>
@@ -1382,22 +1382,6 @@ function showCalendly() {
     showCalendly();
   }
 })();
-
-
-    return;
-  }
-
-  /* DISQUALIFY: not willing to invest */
-  if (invest === 'no') {
-    document.getElementById('dq-invest').classList.add('show');
-    document.getElementById('dq-invest').scrollIntoView({ behavior: 'smooth', block: 'center' });
-    return;
-  }
-
-  /* QUALIFIED: show payment */
-  document.getElementById('paymentGate').classList.add('show');
-  document.getElementById('paymentGate').scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
 </script>
 
 </body>
