@@ -1320,6 +1320,11 @@
       </div>
 
       <div class="form-group">
+        <label for="userEmail" class="form-label">Email Address <span class="req">*</span></label>
+        <input type="email" id="userEmail" name="email" class="form-input" required placeholder="e.g. rahul@example.com">
+      </div>
+
+      <div class="form-group">
         <label for="userPhone" class="form-label">Phone Number <span class="req">*</span></label>
         <input type="tel" id="userPhone" name="phone" class="form-input" required placeholder="e.g. +91 98765 43210">
       </div>
@@ -1340,11 +1345,16 @@
       </div>
 
       <div class="form-group">
-        <label for="userLinkedin" class="form-label">LinkedIn Profile Link <span class="req">*</span></label>
-        <input type="url" id="userLinkedin" name="linkedin" class="form-input" required placeholder="https://linkedin.com/in/yourprofile">
+        <label for="userLinkedin" class="form-label">LinkedIn Profile Link <span style="font-weight:400; font-size:.75rem; color:var(--g5);">(Optional)</span></label>
+        <input type="text" id="userLinkedin" name="linkedin" class="form-input" placeholder="https://linkedin.com/in/yourprofile (optional)">
       </div>
 
-      <button type="submit" class="btn btn-primary form-submit-btn">Request Strategy Call &rarr;</button>
+      <div class="form-group">
+        <label for="userTime" class="form-label">Preferred Contact Time <span style="font-weight:400; font-size:.75rem; color:var(--g5);">(Optional)</span></label>
+        <input type="text" id="userTime" name="preferred_time" class="form-input" placeholder="e.g. Weekdays after 6 PM IST (optional)">
+      </div>
+
+      <button type="submit" class="btn btn-primary form-submit-btn" id="submitBtn">Request Strategy Call &rarr;</button>
     </form>
 
     <!-- Thank You Card (Shown on submit) -->
@@ -1361,8 +1371,16 @@
   </div>
 </section>
 
-<!-- ════ FAQ ════ -->
-<section class="section section-alt">
+<!-- ════ FOOTER ════ -->
+<footer>
+  <p style="margin-bottom:.4rem;">&copy; 2025 Prerna Soni &nbsp;&middot;&nbsp; TPM Career Accelerator</p>
+  <p>
+    <a href="https://linkedin.com/in/prernasoni">LinkedIn</a>
+  </p>
+</footer>
+
+<!-- ════ FAQ (Absolute End of Page) ════ -->
+<section class="section section-alt" id="faq">
   <div class="container">
     <div class="section-header fade-up">
       <div class="label">Common questions</div>
@@ -1371,7 +1389,7 @@
     <div class="faq-list">
       <details class="faq-item">
         <summary>How does the 1-on-1 strategy call work?</summary>
-        <div class="answer">You pick a time slot that works for you from the calendar above. Once scheduled, you'll receive a calendar invite with a video link. During the 45-minute call, we review your experience, target roles, and build a concrete action plan together.</div>
+        <div class="answer">Fill in the quick request form above with your details. Once submitted, our team will review your information and reach out to schedule your 45-minute video call at a convenient time for you.</div>
       </details>
       <details class="faq-item">
         <summary>What exactly is the "personalised career roadmap"?</summary>
@@ -1395,19 +1413,11 @@
       </details>
       <details class="faq-item">
         <summary>Can I reschedule my call if something comes up?</summary>
-        <div class="answer">Yes, absolutely — use the rescheduling link in your Calendly confirmation email to pick a new date/time slot that works for you.</div>
+        <div class="answer">Yes, absolutely — just let our team know via WhatsApp or email when we contact you, and we'll easily adjust the time slot for you.</div>
       </details>
     </div>
   </div>
 </section>
-
-<!-- ════ FOOTER ════ -->
-<footer>
-  <p style="margin-bottom:.4rem;">&copy; 2025 Prerna Soni &nbsp;&middot;&nbsp; TPM Career Accelerator</p>
-  <p>
-    <a href="https://linkedin.com/in/prernasoni">LinkedIn</a>
-  </p>
-</footer>
 
 <!-- ════ STICKY MOBILE CTA ════ -->
 <div class="sticky-cta" id="stickyCta">
@@ -1449,37 +1459,45 @@ fadeEls.forEach(el => io.observe(el));
     e.preventDefault();
 
     var nameVal = document.getElementById('userName').value.trim();
+    var emailVal = document.getElementById('userEmail').value.trim();
     var phoneVal = document.getElementById('userPhone').value.trim();
     var expVal = document.getElementById('userExp').value.trim();
     var roleVal = document.getElementById('userRole').value;
     var linkedinVal = document.getElementById('userLinkedin').value.trim();
+    var timeVal = document.getElementById('userTime').value.trim();
 
-    if (!nameVal || !phoneVal || !expVal || !roleVal || !linkedinVal) {
+    if (!nameVal || !emailVal || !phoneVal || !expVal || !roleVal) {
       return;
     }
 
+    var payload = {
+      name: nameVal,
+      email: emailVal,
+      phone: phoneVal,
+      experience: expVal,
+      target_role: roleVal,
+      linkedin: linkedinVal,
+      preferred_time: timeVal
+    };
+
+    // Send POST request in JSON format to Make.com webhook
+    fetch('https://hook.eu1.make.com/wdoe7sw1g85fddmxr23ql14p9dr91xq8', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    }).catch(function(err) {
+      console.error('Webhook error:', err);
+    });
+
     // Trigger request_submit backend/analytics event
     if (typeof gtag === 'function') {
-      gtag('event', 'request_submit', {
-        'event_category': 'Lead Generation',
-        'event_label': roleVal,
-        'user_name': nameVal,
-        'user_phone': phoneVal,
-        'user_exp': expVal,
-        'target_role': roleVal,
-        'user_linkedin': linkedinVal
-      });
+      gtag('event', 'request_submit', payload);
     }
 
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      'event': 'request_submit',
-      'userName': nameVal,
-      'userPhone': phoneVal,
-      'userExp': expVal,
-      'targetRole': roleVal,
-      'userLinkedin': linkedinVal
-    });
+    window.dataLayer.push(Object.assign({ 'event': 'request_submit' }, payload));
 
     // Hide form and show Thank You card with WhatsApp link
     var thankYouEl = document.getElementById('thankYouCard');
