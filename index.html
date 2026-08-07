@@ -1346,12 +1346,12 @@
 
       <div class="form-group">
         <label for="userLinkedin" class="form-label">LinkedIn Profile Link <span style="font-weight:400; font-size:.75rem; color:var(--g5);">(Optional)</span></label>
-        <input type="text" id="userLinkedin" name="linkedin" class="form-input" placeholder="https://linkedin.com/in/yourprofile (optional)">
+        <input type="text" id="userLinkedin" name="linkedin_profile" class="form-input" placeholder="https://linkedin.com/in/yourprofile (optional)">
       </div>
 
       <div class="form-group">
         <label for="userTime" class="form-label">Preferred Contact Time <span style="font-weight:400; font-size:.75rem; color:var(--g5);">(Optional)</span></label>
-        <input type="text" id="userTime" name="preferred_time" class="form-input" placeholder="e.g. Weekdays after 6 PM IST (optional)">
+        <input type="text" id="userTime" name="time" class="form-input" placeholder="e.g. Weekdays after 6 PM IST (optional)">
       </div>
 
       <button type="submit" class="btn btn-primary form-submit-btn" id="submitBtn">Request Strategy Call &rarr;</button>
@@ -1476,15 +1476,16 @@ fadeEls.forEach(el => io.observe(el));
       phone: phoneVal,
       experience: expVal,
       target_role: roleVal,
-      linkedin: linkedinVal,
-      preferred_time: timeVal
+      linkedin_profile: linkedinVal,
+      time: timeVal
     };
 
-    // Send POST request in JSON format to Make.com webhook
+    // Send POST request as top-level JSON fields to Make.com webhook
     fetch('https://hook.eu1.make.com/wdoe7sw1g85fddmxr23ql14p9dr91xq8', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
       },
       body: JSON.stringify(payload)
     }).catch(function(err) {
