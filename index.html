@@ -1382,6 +1382,33 @@
         <input type="text" id="userTime" name="time" class="form-input" placeholder="e.g. Weekdays after 6 PM IST (optional)">
       </div>
 
+      <div class="form-group">
+        <label for="userHear" class="form-label">How did you hear about us? <span class="req">*</span></label>
+        <select id="userHear" name="how_did_you_hear" class="form-select" required>
+          <option value="" disabled selected>Select an option...</option>
+          <option value="LinkedIn">LinkedIn</option>
+          <option value="Interview Kickstart Referral">Interview Kickstart Referral</option>
+          <option value="YouTube">YouTube</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Our mentorships start at ₹20k, are you willing to invest in your career journey? <span class="req">*</span></label>
+        <div class="radio-group" style="display:flex; gap:1.5rem; margin-top:.5rem;">
+          <label style="display:inline-flex; align-items:center; gap:.5rem; cursor:pointer; font-weight:600; font-size:.95rem;">
+            <input type="radio" name="willing_to_invest" value="Yes" id="investYes" required style="accent-color:var(--accent); width:18px; height:18px;"> Yes
+          </label>
+          <label style="display:inline-flex; align-items:center; gap:.5rem; cursor:pointer; font-weight:600; font-size:.95rem;">
+            <input type="radio" name="willing_to_invest" value="No" id="investNo" required style="accent-color:var(--accent); width:18px; height:18px;"> No
+          </label>
+        </div>
+        <div id="investWarning" style="display:none; margin-top:.85rem; padding:1rem 1.25rem; background:rgba(239,68,68,.12); border:1px solid rgba(239,68,68,.35); border-radius:var(--r); color:#fca5a5; font-size:.88rem; line-height:1.5;">
+          &#9888;&nbsp; <strong>Please Note:</strong> Our 1-on-1 strategy sessions are specifically reserved for candidates ready to invest in their mentorship journey. If you are not ready to invest at this time, please join our free <a href="https://chat.whatsapp.com/CwEZ12YSFxOEgi1gyJBEMu" target="_blank" rel="noopener" style="color:#fff; text-decoration:underline; font-weight:700;">WhatsApp Community</a> instead of booking a 1-on-1 call.
+        </div>
+      </div>
+
       <button type="submit" class="btn btn-primary form-submit-btn" id="submitBtn">Request Strategy Call &rarr;</button>
     </form>
 
@@ -1483,6 +1510,21 @@ fadeEls.forEach(el => io.observe(el));
   var formEl = document.getElementById('strategyCallForm');
   if (!formEl) return;
 
+  var investYesRadio = document.getElementById('investYes');
+  var investNoRadio = document.getElementById('investNo');
+  var warningEl = document.getElementById('investWarning');
+
+  function toggleInvestWarning() {
+    if (investNoRadio && investNoRadio.checked) {
+      warningEl.style.display = 'block';
+    } else if (investYesRadio && investYesRadio.checked) {
+      warningEl.style.display = 'none';
+    }
+  }
+
+  if (investYesRadio) investYesRadio.addEventListener('change', toggleInvestWarning);
+  if (investNoRadio) investNoRadio.addEventListener('change', toggleInvestWarning);
+
   formEl.addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -1493,8 +1535,18 @@ fadeEls.forEach(el => io.observe(el));
     var roleVal = document.getElementById('userRole').value;
     var linkedinVal = document.getElementById('userLinkedin').value.trim();
     var timeVal = document.getElementById('userTime').value.trim();
+    var hearVal = document.getElementById('userHear').value;
 
-    if (!nameVal || !emailVal || !phoneVal || !expVal || !roleVal) {
+    var investRadioChecked = document.querySelector('input[name="willing_to_invest"]:checked');
+    var investVal = investRadioChecked ? investRadioChecked.value : '';
+
+    if (!nameVal || !emailVal || !phoneVal || !expVal || !roleVal || !hearVal || !investVal) {
+      return;
+    }
+
+    if (investVal === 'No') {
+      warningEl.style.display = 'block';
+      warningEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
 
@@ -1505,7 +1557,9 @@ fadeEls.forEach(el => io.observe(el));
       experience: expVal,
       target_role: roleVal,
       linkedin_profile: linkedinVal,
-      time: timeVal
+      time: timeVal,
+      how_did_you_hear: hearVal,
+      willing_to_invest: investVal
     };
 
     // Send POST request as top-level JSON fields to Make.com webhook
